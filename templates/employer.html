@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+              
+          
+            <table border = 1>
+                <tr>
+                {% for key, value in output.items() %}
+                    
+                        <th> {{ key }} </th>
+                                            
+                {% endfor %}
+                </tr>
+                {% for i in range(total_records) %}
+                    <tr>    
+                    {% for key in output %}
+                    
+                        <td> {{ output[key][i] }} </td>                        
+                                           
+                    {% endfor %}
+                    <form action="" method="POST">
+                        <td> <button  type="submit" 
+                            name = "submit_button" value="{{ output['_id'][i] }}"  >
+                            Select</button>
+                        </td>
+                     
+                    </form>
+                </tr>
+
+                {% endfor %}
+                
+        </table>            
+            
+        
+        <!-- <script type="text/javascript" src="index.js"></script> -->
+    </body>
+</html>

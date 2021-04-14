@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="" method="POST">
+            <h1>Hi {{user_name}} please upload your resume!</h1>
+            <br> 
+            <table border = 1>
+                {% for key, value in output.items() %}
+
+                    <tr>
+                        <th> {{ key }} </th>
+                        <td> {{ value }} </td>
+                    </tr>
+
+                {% endfor %}
+                
+        </table>            
+            <button style="text-align: center;" id="upload_button" type="submit" 
+            name = "submit_button" value="upload" >Upload</button>
+        </form>
+        <!-- <script type="text/javascript" src="index.js"></script> -->
+    </body>
+</html>
